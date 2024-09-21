@@ -1,0 +1,42 @@
+.customer-info {
+    grid-area: customer-info; /* Define a área da 'customer-info' no grid */
+    display: flex; /* Flexbox para alinhar os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    background-color: var(--base--); /* Define a cor de fundo usando a variável base */
+    padding: 20px; /* Espaçamento interno de 20px */
+    border-radius: 10px; /* Bordas arredondadas de 10px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da div */
+    width: 100%; /* Garante que a div ocupe 100% da coluna no grid */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura total */
+}
+
+.customer-image {
+    width: 60px; /* Define uma largura fixa de 60px para a imagem */
+    height: 60px; /* Define uma altura fixa de 60px */
+    border-radius: 50%; /* Deixa a imagem circular */
+    object-fit: cover; /* Garante que a imagem mantenha suas proporções sem distorções */
+    border: 2px solid transparent; /* Define uma borda transparente */
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(90deg, #2DAA6E, #2DAAAA, #856CCF, #D658B3); /* Adiciona uma borda gradiente */
+    background-origin: border-box; /* Faz o gradiente aparecer nas bordas */
+    background-clip: content-box, border-box; /* Ajusta o recorte para o conteúdo e a borda */
+    margin-right: 20px; /* Adiciona um espaço de 20px à direita da imagem */
+}
+
+.nameDate {
+    display: flex; /* Flexbox para alinhar o nome e a data verticalmente */
+    flex-direction: column; /* Coloca o nome e a data em uma coluna */
+}
+
+.customer-name {
+    font-size: 1.2em; /* Define o tamanho da fonte para 1.2em */
+    font-weight: bold; /* Aplica negrito no nome */
+    color: #333; /* Cor do texto em cinza escuro */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.customer-date {
+    font-size: 0.9em; /* Define o tamanho da fonte para 0.9em */
+    color: #666; /* Cor do texto em cinza claro */
+    margin: 5px 0 0; /* Adiciona um pequeno espaçamento superior */
+}

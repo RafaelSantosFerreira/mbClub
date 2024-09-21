@@ -1,0 +1,25 @@
+.paineis {
+  display: flex;
+  flex-direction: column; /* Alinha os itens em uma única coluna */
+  gap: 10px; /* Adiciona um espaçamento de 10px entre os elementos */
+  padding: 20px; /* Espaçamento interno de 20px */
+  background-color: #f0f0f0; /* Cor de fundo cinza claro */
+  max-width: 100%; /* Garante que a div não ultrapasse a largura máxima da tela */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura total */
+  margin: 5%; /* Adiciona uma margem de 5% ao redor da div */
+}
+
+/* Layout para resoluções maiores */
+@media (min-width: 1024px) {
+  .paineis {
+    display: grid; /* Muda o layout para grid em telas maiores */
+    max-width: 90%; /* A largura máxima será de 90% em telas maiores */
+    grid-template-columns: 1fr 1fr; /* Duas colunas de igual tamanho */
+    grid-template-rows: auto auto; /* Linhas automáticas, ajustadas pelo conteúdo */
+    gap: 20px; /* Espaçamento de 20px entre os elementos no grid */
+    grid-template-areas:
+      "customer-info cardFidelidade"
+      "historico cardFidelidade"
+      "historico progressCard"; /* Define a disposição dos elementos no grid */
+  }
+}

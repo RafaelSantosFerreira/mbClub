@@ -1,0 +1,67 @@
+.progressCard {
+    grid-area: progressCard; /* Define a área da 'progressCard' no grid de layout principal */
+    background-color: #f8f9fa; /* Cor de fundo do cartão de progresso */
+    border-radius: 10px; /* Bordas arredondadas de 10px */
+    padding: 20px; /* Espaçamento interno de 20px */
+    max-width: 100%; /* Garante que o cartão não ultrapasse 100% do contêiner pai */
+    display: flex; /* Usa flexbox para organizar os elementos dentro do cartão */
+    flex-direction: column; /* Alinha os itens na vertical */
+    font: --var(--text-xs); /* Define a fonte usada no cartão */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor do cartão */
+    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos na largura total */
+}
+
+.progressText {
+    display: flex; /* Flexbox para alinhar os itens (texto e número) na mesma linha */
+    justify-content: space-between; /* Espaça os itens na linha */
+    margin-bottom: 10px; /* Espaçamento inferior entre o texto e a barra de progresso */
+}
+
+.progressText h3 {
+    font-size: 1.5em; /* Define o tamanho da fonte para o título */
+    margin: 0; /* Remove a margem padrão */
+    color: #333; /* Cor do texto em cinza escuro */
+}
+
+.progressText span {
+    font-size: 1em; /* Define o tamanho da fonte para o texto do contador */
+    color: #666; /* Cor do texto em cinza claro */
+}
+
+.progressBarWrapper {
+    display: flex; /* Flexbox para alinhar a barra de progresso e o ícone de presente */
+    align-items: center; /* Alinha os itens na vertical */
+    justify-content: space-between; /* Espaça a barra de progresso e o ícone */
+}
+
+.progressBar {
+    width: 85%; /* Largura da barra de progresso */
+    height: 15px; /* Altura da barra de progresso */
+    background-color: #e0e0e0; /* Cor de fundo da barra */
+    border-radius: 8px; /* Bordas arredondadas da barra */
+    position: relative; /* Define o posicionamento relativo para controle de layout */
+    margin-right: 20px; /* Espaçamento entre a barra e o ícone */
+}
+
+.progressFill {
+    height: 100%; /* Define a altura da barra de progresso preenchida */
+    background-image: linear-gradient(90deg, #2DAA6E, #2DAAAA, #856CCF, #D658B3); /* Gradiente de cores para o preenchimento */
+    border-radius: 8px; /* Bordas arredondadas no preenchimento */
+    width: 70%; /* Define o percentual preenchido da barra de progresso */
+}
+
+.giftIcon {
+    display: flex; /* Flexbox para centralizar o ícone de presente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.giftIcon img {
+    width: 50px; /* Define a largura da imagem do presente */
+    height: 50px; /* Define a altura da imagem do presente */
+    transition: filter 0.3s ease; /* Transição suave para quando houver mudanças de filtro (hover, etc.) */
+}
+
+.progressFill:hover + .giftIcon img {
+    filter: hue-rotate(60deg); /* Altera a cor da imagem em 60 graus quando o mouse passa sobre a barra */
+}

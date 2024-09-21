@@ -1,0 +1,106 @@
+/* Estilizando a tabela de histórico */
+table.historico {
+    grid-area: historico;
+    width: 100%; /* A tabela ocupará 100% da largura disponível */
+    border-collapse: collapse; /* Remove o espaçamento entre as células */
+    border-radius: 10px; /* Bordas arredondadas para um visual suave */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse as bordas da tabela */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor da tabela */
+   /* margin-top: 50px;*/
+}
+
+/* Estilizando o cabeçalho da tabela */
+thead th {
+    position: sticky; /* Mantém o cabeçalho fixo ao topo enquanto o corpo da tabela rola */
+    top: 0; /* Define que o cabeçalho deve estar fixado ao topo */
+    background-color: var( --base--); /* Cor de fundo branca para o cabeçalho */
+    padding: 10px; /* Adiciona um espaçamento interno (padding) ao cabeçalho */
+    font-weight: bold; /* O texto no cabeçalho será em negrito */
+    text-align: left; /* Alinha o texto à esquerda */
+    z-index: 10; /* Define que o cabeçalho tem uma prioridade de sobreposição alta */
+    border-bottom: 1px solid #ddd; /* Adiciona uma linha inferior para separar o cabeçalho do corpo da tabela */
+}
+/* Estilizando as células do corpo da tabela */
+tbody td {
+    flex: 1; /* Cada célula ocupa uma fração igual da linha */
+    padding: 10px; /* Adiciona um espaçamento interno às células */
+    border-bottom: 1px solid #ddd; /* Adiciona uma linha inferior para separar as linhas da tabela */
+    vertical-align: middle; /* Alinha verticalmente o conteúdo da célula ao centro */
+}
+
+/* Alinhando o conteúdo da segunda coluna à direita */
+tbody td:nth-child(2) {
+    text-align: right; /* Alinha o conteúdo da segunda coluna à direita */
+}
+/* Estilizando a segunda coluna do cabeçalho (Cortes) para alinhar à direita */
+thead th.cortes {
+    text-align: right; /* Alinha o texto da coluna de cortes à direita */
+}
+
+/* Definindo a altura máxima do corpo da tabela e ativando o scroll vertical */
+tbody {
+    display: block; /* Transforma o corpo da tabela em um bloco para permitir o controle de altura */
+    max-height: 300px; /* Define a altura máxima para o corpo da tabela */
+    overflow-y: auto; /* Ativa a rolagem vertical no corpo da tabela */
+}
+
+/* Estilizando as linhas do corpo da tabela */
+tbody tr {
+    display: flex; /* Alinha as células de cada linha horizontalmente com flexbox */
+    background-color: var( --base--);
+    justify-content: space-between; /* Alinha o conteúdo das células à esquerda e à direita */
+    padding: 10px 0; /* Adiciona um espaçamento vertical entre as linhas */
+}
+
+/* Estilizando as células do corpo da tabela */
+tbody td {
+    flex: 1; /* Cada célula ocupa uma fração igual da linha */
+    padding: 10px; /* Adiciona um espaçamento interno às células */
+    border-bottom: 1px solid #ddd; /* Adiciona uma linha inferior para separar as linhas da tabela */
+    vertical-align: middle; /* Alinha verticalmente o conteúdo da célula ao centro */
+}
+
+/* Removendo a borda inferior da última linha */
+tbody tr:last-child td {
+    border-bottom: none; /* Remove a borda inferior da última linha para um visual mais suave */
+}
+
+/* Estilizando o título (data) dentro da célula da primeira coluna */
+tbody td h1 {
+    font-size: 1rem; /* Define o tamanho da fonte para 1 rem (relativo ao tamanho da fonte raiz) */
+    margin: 0; /* Remove a margem padrão */
+    font-weight: bold; /* O texto será exibido em negrito */
+    color: #333; /* Define a cor do texto em um cinza escuro */
+}
+
+/* Estilizando o horário dentro da célula */
+tbody td span {
+    font-size: 0.85rem; /* Define o tamanho da fonte um pouco menor que o padrão */
+    color: #777; /* Define a cor do texto em um cinza claro */
+}
+
+/* Estilizando o ícone dentro da célula */
+table.historico img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+/* Efeito de hover nas linhas da tabela */
+tbody tr:hover {
+    background-color: #f1f1f1; /* Adiciona um fundo mais claro quando o mouse passa sobre a linha */
+}
+
+/* Garantindo que o cabeçalho e o corpo da tabela mantenham a largura adequada */
+table.historico thead, 
+table.historico tbody tr {
+    display: table; /* Configura o cabeçalho e as linhas para se comportarem como tabelas */
+    width: 100%; /* Garante que o cabeçalho e as linhas ocupem 100% da largura da tabela */
+    table-layout: fixed; /* As células terão uma largura fixa, para que o layout da tabela seja consistente */
+}
+
+/* Garantindo que o corpo da tabela role, mas o cabeçalho permaneça fixo */
+table.historico tbody {
+    display: block; /* O corpo da tabela é tratado como um bloco para que a rolagem possa ocorrer */
+}

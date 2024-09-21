@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <img class="logo" src="./src/assets/Logo.svg" alt="logotipo">
+    </header>
+
+    <!-- buca clie -->
+    <form class="form">
+        <div class="input-group">
+            <input 
+                class="input" 
+                placeholder="ID do cartão" 
+                type="text" 
+                id="id-cartao" 
+                name="id-cartao" 
+                required="required"
+            />
+            <button type="submit" class="input-button">
+                <img src="./src/assets/Default.svg" alt="Ícone que indica tecla 'enter'">
+            </button>
+        </div>
+    </form>
+
+    <!-- Info Cliente -->
+    <div class="paineis">
+        <div class="customer-info">
+            <!-- Exibe a imagem do cliente -->
+            <img src="./img/mulher.jpeg" alt="Foto do cliente" class="customer-image">
+            <div class="nameDate">
+                <!-- Exibe o nome do cliente -->
+                <h2 class="customer-name">Natália Miranda</h2>
+                <!-- Exibe a data associada -->
+                <p class="customer-date">Cliente desde 18/09/2023</p>
+            </div>
+        </div>
+
+        <!-- Histórico de Cortes -->
+        <table class="historico">
+            <!-- Cabeçalho da tabela -->
+            <thead>
+                <tr>
+                    <th>Histórico</th>
+                    <th class="cortes">7 Cortes</th>
+                </tr>
+            </thead>
+            
+            <!-- Corpo da tabela -->
+            <tbody>
+                <!-- Linhas da tabela -->
+                <tr>
+                    <td><h1>29/04/2024</h1><span>18:30</span></td>
+                    <td><img src="./icons/SealCheckVerde.svg" alt="Ícone de corte"></td>
+                </tr>
+                <tr>
+                    <td><h1>29/04/2024</h1><span>18:30</span></td>
+                    <td><img src="./icons/SealCheckVerde.svg" alt="Ícone de corte"></td>
+                </tr>
+                <tr>
+                    <td><h1>29/04/2024</h1><span>18:30</span></td>
+                    <td><img src="./icons/SealCheckVerde.svg" alt="Ícone de corte"></td>
+                </tr>
+                <tr>
+                    <td><h1>29/04/2024</h1><span>18:30</span></td>
+                    <td><img src="./icons/SealCheckVerde.svg" alt="Ícone de corte"></td>
+                </tr>
+                <tr>
+                    <td><h1>29/04/2024</h1><span>18:30</span></td>
+                    <td><img src="./icons/SealCheckVerde.svg" alt="Ícone de corte"></td>
+                </tr>
+                <tr>
+                    <td><h1>29/04/2024</h1><span>18:30</span></td>
+                    <td><img src="./icons/SealCheckVerde.svg" alt="Ícone de corte"></td>
+                </tr>
+                <tr>
+                    <td><h1>29/04/2024</h1><span>18:30</span></td>
+                    <td><img src="./icons/SealCheckVerde.svg" alt="Ícone de corte"></td>
+                </tr>
+                <tr>
+                    <td><h1>29/04/2024</h1><span>18:30</span></td>
+                    <td><img src="./icons/SealCheckVerde.svg" alt="Ícone de corte"></td>
+                </tr>
+                <tr>
+                    <td><h1>29/04/2024</h1><span>18:30</span></td>
+                    <td><img src="./icons/SealCheckVerde.svg" alt="Ícone de corte"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Cartão Fidelidade -->
+        <div class="cardFidelidade">
+            <div class="tituloFidelidade">
+                <h2>CARTÃO FIDELIDADE</h2>
+                <span class="cardid">21213-2121-212</span>
+            </div>
+            
+            <p>Ao fazer cortes de cabelo, o décimo sai de graça!</p>
+            <div class="stamps">
+                <div class="stamp checked">
+                    <img src="./icons/Gift-SolidVerde.svg" alt="checked">
+                </div>
+                <div class="stamp checked">
+                    <img src="./icons/Gift-SolidVerde.svg" alt="checked">
+                </div>
+                <div class="stamp checked">
+                    <img src="./icons/Gift-SolidVerde.svg" alt="checked">
+                </div>
+                <div class="stamp checked">
+                    <img src="./icons/Gift-SolidVerde.svg" alt="checked">
+                </div>
+                <div class="stamp checked">
+                    <img src="./icons/Gift-SolidVerde.svg" alt="checked">
+                </div>
+                <div class="stamp checked">
+                    <img src="./icons/Gift-SolidVerde.svg" alt="checked">
+                </div>
+                <div class="stamp checked">
+                    <img src="./icons/Gift-SolidVerde.svg" alt="checked">
+                </div>
+                <div class="stamp checked">
+                    <img src="./icons/Gift-SolidVerde.svg" alt="checked">
+                </div>
+                <div class="stamp unchecked">
+                    <img src="./icons/Gift-SolidCinza.svg" alt="unchecked">
+                </div>
+                <div class="stamp unchecked">
+                    <img src="./icons/Gift-SolidCinza.svg" alt="unchecked">
+                </div>
+            </div>
+        </div>
+   
+
+    <!-- Progresso do Cartão -->
+    <div class="progressCard">
+        <div class="progressInfo">
+            <div class="progressText">
+                <h3><strong>3</strong> Cortes Restantes</h3>
+                <span>7 de 10</span>
+            </div>
+            <div class="progressBarWrapper">
+                <div class="progressBar">
+                    <div class="progressFill"></div>
+                </div>
+                <div class="giftIcon">
+                    <img src="./icons/Gift.svg" alt="gift icon">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+    
+ <!-- Inclusao do arquivo JavaScript externo -->
+ <script type="module" src="./src/main.js"></script>
+</body>
+</html>

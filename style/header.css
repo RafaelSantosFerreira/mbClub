@@ -1,0 +1,7 @@
+header .logo {
+        display: block;
+        margin-inline: auto;
+        width: 200px; /* Aumenta a largura da imagem */
+        margin-top: 4rem;
+    }
+
